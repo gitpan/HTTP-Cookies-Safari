@@ -1,4 +1,8 @@
-# $Id: Changes,v 1.4 2003/11/27 12:57:20 comdog Exp $
+# $Id: Changes,v 1.5 2004/09/21 01:16:13 comdog Exp $
+
+1.06 - Mon Sep 20 20:13:09 2004
+* updated to work with the latest Mac::PropertyList, which has a new
+interface
 
 1.03 - Thu Nov 27 06:56:07 2003
 HTTP::Cookies::Safari now uses Date::Calc instead of Date::Manip.

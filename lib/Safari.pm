@@ -1,4 +1,4 @@
-# $Id: Safari.pm,v 1.6 2004/09/21 01:11:27 comdog Exp $
+# $Id: Safari.pm,v 1.7 2005/03/12 05:55:17 comdog Exp $
 package HTTP::Cookies::Safari;
 use strict;
 
@@ -37,7 +37,7 @@ brian d foy, C<< <bdfoy@cpan.org> >>
 
 =head1 COPYRIGHT
 
-Copyright 2003-2004, brian d foy, All rights reserved
+Copyright 2003-2005, brian d foy, All rights reserved
 
 This library is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.
@@ -64,7 +64,7 @@ use vars qw( $VERSION );
 use constant TRUE  => 'TRUE';
 use constant FALSE => 'FALSE';
 
-$VERSION = sprintf "%2d.%02d", q$Revision: 1.6 $ =~ m/ (\d+) \. (\d+) /xg;
+$VERSION = sprintf "%2d.%02d", q$Revision: 1.7 $ =~ m/ (\d+) \. (\d+) /xg;
 
 use Date::Calc;
 use Mac::PropertyList;
