@@ -1,2 +1,5 @@
-# $Id: Changes,v 1.1 2003/01/08 05:44:47 comdog Exp $
+# $Id: Changes,v 1.2 2003/01/08 05:54:23 comdog Exp $
+
+1.01 - Tue Jan  7 23:54:19 2003
+	* initial version to work with Safari cookie files
 
