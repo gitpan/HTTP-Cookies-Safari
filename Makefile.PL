@@ -1,4 +1,4 @@
-# $Id: Makefile.PL,v 1.2 2003/01/08 07:09:00 comdog Exp $
+# $Id: Makefile.PL,v 1.3 2003/11/27 12:54:08 comdog Exp $
 use ExtUtils::MakeMaker;
 
 sub ExtUtils::MM_Any::test_via_harness
@@ -15,14 +15,12 @@ WriteMakefile
         'NAME'           => 'HTTP::Cookies::Safari',
         'VERSION_FROM'   => 'lib/Safari.pm',
  		'PREREQ_PM'      => {
- 			'Date::Manip'           => '0',
+ 			'Date::Calc'            => '0',
  			'File::Find::Rule'      => '0',
  			'HTTP::Cookies'         => '1.25',
  			'Mac::PropertyList'     => '0',
  			'Test::Manifest'        => '0.9',
  			'Test::More'            => '0',
- 			'Test::Pod'             => '0.72',
- 			'Test::Prereq'          => '0.18',
  			'Text::Diff'            => '0',
  			},
         'PM'             => {

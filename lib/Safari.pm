@@ -1,4 +1,4 @@
-# $Id: Safari.pm,v 1.2 2003/01/08 07:09:00 comdog Exp $
+# $Id: Safari.pm,v 1.3 2003/11/27 12:54:38 comdog Exp $
 package HTTP::Cookies::Safari;
 use strict;
 
@@ -64,9 +64,9 @@ use vars qw( $VERSION );
 use constant TRUE  => 'TRUE';
 use constant FALSE => 'FALSE';
 
-$VERSION = sprintf "%2d.%02d", q$Revision: 1.2 $ =~ m/ (\d+) \. (\d+) /xg;
+$VERSION = sprintf "%2d.%02d", q$Revision: 1.3 $ =~ m/ (\d+) \. (\d+) /xg;
 
-use Date::Manip;
+use Date::Calc;
 use Mac::PropertyList;
 
 sub load
@@ -78,7 +78,7 @@ sub load
     local $_;
     local $/ = "\n";  # make sure we got standard record separator
 
-    open my $fh, $file or return;
+    open my( $fh ), $file or return;
 
     my $data = do { local $/; <$fh> };
  
@@ -100,7 +100,7 @@ sub load
 			m/(\d\d\d\d)-(\d\d)-(\d\d)T(\d\d):(\d\d):(\d\d)Z/g;
 				
 		$expires = 
-			&Date::Manip::Date_SecsSince1970GMT( $m, $d, $y, $h, $mn, $s );
+			&Date::Calc::Mktime( $y, $m, $d, $h, $mn, $s );
 					
 		# XXX: Convert Expires date to unix epoch
 		
