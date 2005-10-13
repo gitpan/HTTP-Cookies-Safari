@@ -1,4 +1,4 @@
-# $Id: Safari.pm,v 1.9 2005/10/13 22:19:18 comdog Exp $
+# $Id: Safari.pm,v 1.10 2005/10/13 22:31:49 comdog Exp $
 package HTTP::Cookies::Safari;
 use strict;
 
@@ -23,6 +23,7 @@ Note: If the source Safari cookie file specifies and expiry date past
 the unix 32-bit epoch, this file changes the expiry date to 0xFFFFFFFF
 in unix seconds. That should be enough for anyone, at least to the next
 release.
+
 
 See L<HTTP::Cookies>.
 
@@ -73,7 +74,7 @@ use vars qw( $VERSION );
 use constant TRUE  => 'TRUE';
 use constant FALSE => 'FALSE';
 
-$VERSION = sprintf "%2d.%02d", q$Revision: 1.9 $ =~ m/ (\d+) \. (\d+) /xg;
+$VERSION = sprintf "%2d.%02d", q$Revision: 1.10 $ =~ m/ (\d+) \. (\d+) /xg;
 
 use Date::Calc;
 use Mac::PropertyList;
