@@ -1,4 +1,4 @@
-# $Id: Safari.pm,v 1.7 2005/03/12 05:55:17 comdog Exp $
+# $Id: Safari.pm,v 1.9 2005/10/13 22:19:18 comdog Exp $
 package HTTP::Cookies::Safari;
 use strict;
 
@@ -19,6 +19,11 @@ HTTP::Cookies::Safari - Cookie storage and management for Safari
 This package overrides the load() and save() methods of HTTP::Cookies
 so it can work with Safari cookie files.
 
+Note: If the source Safari cookie file specifies and expiry date past
+the unix 32-bit epoch, this file changes the expiry date to 0xFFFFFFFF
+in unix seconds. That should be enough for anyone, at least to the next
+release.
+
 See L<HTTP::Cookies>.
 
 =head1 SOURCE AVAILABILITY
@@ -34,6 +39,10 @@ members of the project can shepherd this module appropriately.
 =head1 AUTHOR
 
 brian d foy, C<< <bdfoy@cpan.org> >>
+
+=head1 CREDITS
+
+Jon Orwant pointed out the problem with dates too far in the future
 
 =head1 COPYRIGHT
 
@@ -64,7 +73,7 @@ use vars qw( $VERSION );
 use constant TRUE  => 'TRUE';
 use constant FALSE => 'FALSE';
 
-$VERSION = sprintf "%2d.%02d", q$Revision: 1.7 $ =~ m/ (\d+) \. (\d+) /xg;
+$VERSION = sprintf "%2d.%02d", q$Revision: 1.9 $ =~ m/ (\d+) \. (\d+) /xg;
 
 use Date::Calc;
 use Mac::PropertyList;
@@ -99,8 +108,8 @@ sub load
 		my( $y, $m, $d, $h, $mn, $s ) = $expires =~
 			m/(\d\d\d\d)-(\d\d)-(\d\d)T(\d\d):(\d\d):(\d\d)Z/g;
 
-		$expires =
-			&Date::Calc::Mktime( $y, $m, $d, $h, $mn, $s );
+		$expires = eval {
+			&Date::Calc::Mktime( $y, $m, $d, $h, $mn, $s ) } || 0xFFFFFFFF;
 
 		# XXX: Convert Expires date to unix epoch
 

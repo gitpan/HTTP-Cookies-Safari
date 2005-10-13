@@ -1,7 +1,8 @@
-# $Id: test_manifest,v 1.4 2005/03/12 05:52:24 comdog Exp $
+# $Id: test_manifest,v 1.5 2005/10/13 22:15:03 comdog Exp $
 compile.t
 pod.t
 pod_coverage.t
 prereq.t
 load.t
+epoch-limit.t
 save.t
