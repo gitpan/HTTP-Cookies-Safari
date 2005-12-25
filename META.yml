@@ -1,7 +1,7 @@
 # http://module-build.sourceforge.net/META-spec.html
 #XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
 name:         HTTP-Cookies-Safari
-version:      1.10
+version:      1.11
 version_from: lib/Safari.pm
 installdirs:  site
 requires:
@@ -12,4 +12,4 @@ requires:
     Text::Diff:                    0
 
 distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.23
+generated_by: ExtUtils::MakeMaker version 6.30

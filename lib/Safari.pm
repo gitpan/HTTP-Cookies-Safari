@@ -1,4 +1,4 @@
-# $Id: Safari.pm,v 1.10 2005/10/13 22:31:49 comdog Exp $
+# $Id: Safari.pm,v 1.11 2005/12/25 17:04:54 comdog Exp $
 package HTTP::Cookies::Safari;
 use strict;
 
@@ -74,7 +74,7 @@ use vars qw( $VERSION );
 use constant TRUE  => 'TRUE';
 use constant FALSE => 'FALSE';
 
-$VERSION = sprintf "%2d.%02d", q$Revision: 1.10 $ =~ m/ (\d+) \. (\d+) /xg;
+$VERSION = sprintf "%2d.%02d", q$Revision: 1.11 $ =~ m/ (\d+) \. (\d+) /xg;
 
 use Date::Calc;
 use Mac::PropertyList;
@@ -146,7 +146,7 @@ sub save
 
 			return if $discard && not $self->{ignore_discard};
 
-			return if time > $expires;
+			return if defined $expires && time > $expires;
 
 			$expires = do {
 				unless( $expires ) { 0 }
