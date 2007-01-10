@@ -1,4 +1,4 @@
-# $Id: Safari.pm,v 1.11 2005/12/25 17:04:54 comdog Exp $
+# $Id: Safari.pm,v 1.12 2007/01/10 04:14:10 comdog Exp $
 package HTTP::Cookies::Safari;
 use strict;
 
@@ -45,12 +45,12 @@ brian d foy, C<< <bdfoy@cpan.org> >>
 
 Jon Orwant pointed out the problem with dates too far in the future
 
-=head1 COPYRIGHT
+=head1 COPYRIGHT AND LICENSE
 
-Copyright 2003-2005, brian d foy, All rights reserved
+Copyright (c) 2003-2007 brian d foy.  All rights reserved.
 
-This library is free software; you can redistribute it and/or
-modify it under the same terms as Perl itself.
+This program is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
 
 =cut
 
@@ -74,7 +74,7 @@ use vars qw( $VERSION );
 use constant TRUE  => 'TRUE';
 use constant FALSE => 'FALSE';
 
-$VERSION = sprintf "%2d.%02d", q$Revision: 1.11 $ =~ m/ (\d+) \. (\d+) /xg;
+$VERSION = sprintf "%2d.%02d", q$Revision: 1.12 $ =~ m/ (\d+) \. (\d+) /xg;
 
 use Date::Calc;
 use Mac::PropertyList;

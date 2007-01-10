@@ -1,15 +1,16 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         HTTP-Cookies-Safari
-version:      1.11
-version_from: lib/Safari.pm
-installdirs:  site
-requires:
+--- #YAML:1.0
+name:                HTTP-Cookies-Safari
+version:             1.12
+abstract:            ~
+license:             perl
+generated_by:        ExtUtils::MakeMaker version 6.31
+distribution_type:   module
+requires:     
     Date::Calc:                    0
     HTTP::Cookies:                 1.25
     Mac::PropertyList:             0.9
     Test::More:                    0
     Text::Diff:                    0
-
-distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.30
+meta-spec:
+    url:     http://module-build.sourceforge.net/META-spec-v1.2.html
+    version: 1.2

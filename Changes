@@ -1,4 +1,12 @@
-# $Id: Changes,v 1.7 2005/10/13 22:21:29 comdog Exp $
+# $Id: Changes,v 1.9 2007/01/10 05:02:36 comdog Exp $
+
+1.12 - Tue Jan  9 23:02:48 2007
+	* updated copyright and license info
+	* no code changes, so no need to upgrade
+
+1.11 - Sun Dec 25 09:39:32 2005
+	* Fixed issue with ignore_discard: cookies with no expiry were discarded
+	anyway.
 
 1.09 - Thu Oct 13 15:19:42 2005
 	* Jon Orwants pointed out that a Safari cookie file could have a 
