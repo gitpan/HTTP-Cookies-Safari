@@ -1,4 +1,4 @@
-# $Id: compile.t,v 1.2 2004/09/17 18:09:45 comdog Exp $
+# $Id: compile.t 1479 2004-09-17 18:09:45Z comdog $
 BEGIN {
 	@classes = qw( HTTP::Cookies::Safari );
 	}

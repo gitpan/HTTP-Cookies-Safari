@@ -1,4 +1,4 @@
-# $Id: save.t,v 1.1 2003/01/08 05:44:47 comdog Exp $
+# $Id: save.t 2379 2007-11-10 21:15:33Z comdog $
 
 use Test::More tests => 2;
 use Text::Diff;
@@ -9,6 +9,7 @@ my $dist_file = 't/Cookies.plist';
 my $save_file = 't/Cookies2.plist';
 
 my %Domains = qw( .cnn.com 1 .usatoday.com 3 );
+
 
 my $jar = HTTP::Cookies::Safari->new( File => $dist_file );
 isa_ok( $jar, 'HTTP::Cookies::Safari' );
@@ -23,4 +24,4 @@ ok( $same, 'Saved file is same as original' );
 #print STDERR $diff;
 }
 
-#END { unlink $save_file }
+END { unlink $save_file }

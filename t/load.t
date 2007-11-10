@@ -1,4 +1,4 @@
-# $Id: load.t,v 1.1 2003/01/08 05:44:47 comdog Exp $
+# $Id: load.t 792 2003-01-08 05:44:47Z comdog $
 
 use Test::More tests => 5;
 
