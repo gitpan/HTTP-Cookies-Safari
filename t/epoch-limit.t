@@ -1,4 +1,4 @@
-# $Id: epoch-limit.t 1678 2005-10-13 22:15:03Z comdog $
+# $Id$
 
 use Test::More tests => 5;
 

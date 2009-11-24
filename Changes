@@ -1,4 +1,8 @@
-# $Id: Changes 2380 2007-11-10 21:16:32Z comdog $
+# $Id$
+
+1.14 - Tue Nov 24 08:22:36 2009
+	* Require Mac::PropertyList 1.33, which handles XML entities
+	* Move everything to Github
 
 1.13 - Sat Nov 10 15:16:05 2007
 	* Cleanups for the move from CVS to SVN, kwalitee

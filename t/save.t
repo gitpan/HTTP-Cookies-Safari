@@ -1,4 +1,4 @@
-# $Id: save.t 2379 2007-11-10 21:15:33Z comdog $
+# $Id$
 
 use Test::More tests => 2;
 use Text::Diff;
