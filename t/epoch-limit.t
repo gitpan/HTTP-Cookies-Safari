@@ -1,9 +1,6 @@
-# $Id$
-
 use Test::More tests => 5;
 
 use HTTP::Cookies::Safari;
-#use Data::Dumper;
 
 my %Domains = qw( .cnn.com 1 );
 

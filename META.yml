@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               HTTP-Cookies-Safari
-version:            1.14
+version:            1.15
 abstract:           Cookie storage and management for Safari
 author:
     - brian d foy <bdfoy@cpan.org>

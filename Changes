@@ -1,8 +1,8 @@
 # $Id$
 
-1.14 - Tue Nov 24 08:22:36 2009
-	* Require Mac::PropertyList 1.33, which handles XML entities
-	* Move everything to Github
+1.15 - Mon Apr 18 14:43:38 2011
+	* Updated module and fixed test with expiring cookie
+	* Everything works the same as the last version
 
 1.13 - Sat Nov 10 15:16:05 2007
 	* Cleanups for the move from CVS to SVN, kwalitee
